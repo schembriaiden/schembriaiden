@@ -9,6 +9,8 @@
   <p>
     <a href="https://discord.gg/SUr3YEgH6C"><img src="https://go-skill-icons.vercel.app/api/icons?i=discord" alt="Discord" width="40" height="40" /></a>
     <a href="https://www.github.com/schembriaiden"><img src="https://go-skill-icons.vercel.app/api/icons?i=github" alt="Github" width="40" height="40" /></a>
+    <a href="https://gitlab.com/schembriaiden"><img src="https://go-skill-icons.vercel.app/api/icons?i=gitlab" alt="GitLab" width="40" height="40" /></a>
+    <a href="https://codeberg.org/schembriaiden"><img src="https://go-skill-icons.vercel.app/api/icons?i=codeberg" alt="Codeberg" width="40" height="40" /></a>
     <a href="https://www.linkedin.com/in/aiden-schembri-a8a057218/"><img src="https://go-skill-icons.vercel.app/api/icons?i=linkedin" alt="LinkedIn" width="40" height="40" /></a>
   </p>
 
