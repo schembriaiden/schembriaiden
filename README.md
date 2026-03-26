@@ -19,9 +19,8 @@
   ## 🚀 About Me
 
   <!-- 🔭 Working on [Worther](https://worther.vercel.app/), developing aircraft for MSFS with [Horizon Simulations](https://github.com/Horizon-Simulations) & [Lunar Simulations](https://lunar-simulations.github.io/)   -->
-  🌱 Currently learning **Zig**  
-  ⚡ Hobbies: Coding • Football • Gaming • Aviation • Flight Sim • Rockets & Space  
-
+  🌱 Currently learning **Rust** & **Zig**  
+  ⚡ Interests: Coding • Gaming • Aviation • Flight Sim • Rockets & Space  • Quantum • Football
   <br>
 
   ## 📊 GitHub Stats
