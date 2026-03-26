@@ -14,8 +14,6 @@
     <a href="https://www.linkedin.com/in/aiden-schembri-a8a057218/"><img src="https://go-skill-icons.vercel.app/api/icons?i=linkedin" alt="LinkedIn" width="40" height="40" /></a>
   </p>
 
-  <br>
-
   ## 🚀 About Me
 
   <!-- 🔭 Working on [Worther](https://worther.vercel.app/), developing aircraft for MSFS with [Horizon Simulations](https://github.com/Horizon-Simulations) & [Lunar Simulations](https://lunar-simulations.github.io/)   -->
@@ -30,19 +28,15 @@
     <img src="./profile/top-langs.svg" alt="Top Languages" width="320" height="165" />
   </p>
 
-  <br>
-
   ## 📅 Contribution Calendar
 
   ![Isometric Calendar](./profile/isocalendar.svg)
 
-  <br>
 
   ## ⭐ Top Starred Repositories
 
   ![Starred Repos](./profile/starred-repos.svg)
 
-  <br>
 
   ## 🏆 GitHub Trophies
 
