@@ -53,7 +53,7 @@ jobs:
           template: classic
           base: ""
           plugin_repositories: yes
-          plugin_repositories_starred: 3
+          plugin_repositories_starred: 2
           plugin_repositories_affiliations: owner
           filename: profile/starred-repos.svg
           output_action: none
