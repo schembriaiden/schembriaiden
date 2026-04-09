@@ -35,7 +35,7 @@
 
   ## ⭐ Top Starred Repositories
 
-  ![Starred Repos](./profile/starred-repos.svg)
+  <img src="https://raw.githubusercontent.com/schembriaiden/schembriaiden/main/profile/starred-repos.svg" alt="Starred Repos" width="480" style="max-width: 100%; height: auto;" />
 
 
   ## 🏆 GitHub Trophies
