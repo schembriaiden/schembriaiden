@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Aiden Schembri's GitHub Stats, Rank: A</title>
-        <desc id="descId">Total Stars Earned: 62, Total Commits  : 7557, Total PRs: 955, Total Issues: 201, Contributed to (last year): 29</desc>
+        <desc id="descId">Total Stars Earned: 63, Total Commits  : 7563, Total PRs: 955, Total Issues: 202, Contributed to (last year): 29</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 54.573551534853515;
+        stroke-dashoffset: 54.23947970689688;
       }
     }
   
@@ -162,7 +162,7 @@
         x="219.01"
         y="12.5"
         data-testid="stars"
-      >62</text>
+      >63</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >201</text>
+      >202</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
