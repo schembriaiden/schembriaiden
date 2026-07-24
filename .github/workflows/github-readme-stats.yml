@@ -17,6 +17,7 @@ jobs:
           token: ${{ secrets.GH_PAT }}
 
       - name: Generate stats card
+        continue-on-error: true
         uses: readme-tools/github-readme-stats-action@v2.0.1
         with:
           card: stats
@@ -25,6 +26,7 @@ jobs:
           token: ${{ secrets.GH_PAT }}
 
       - name: Generate top languages card
+        continue-on-error: true
         uses: readme-tools/github-readme-stats-action@v2.0.1
         with:
           card: top-langs
@@ -33,7 +35,8 @@ jobs:
           token: ${{ secrets.GH_PAT }}
 
       - name: Generate isometric calendar
-        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: schembriaiden
@@ -46,6 +49,7 @@ jobs:
           output_action: none
 
       - name: Generate top repositories
+        continue-on-error: true
         uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
@@ -59,6 +63,7 @@ jobs:
           output_action: none
 
       - name: Generate Profile Trophy
+        continue-on-error: true
         uses: ryo-ma/github-profile-trophy@master
         with:
             token: ${{ secrets.GH_PAT }}
@@ -67,7 +72,9 @@ jobs:
 
       - name: Move metrics files and commit
         run: |
-          sudo mv /metrics_renders/profile/* ./profile/
+          if compgen -G "/metrics_renders/profile/*" > /dev/null; then
+            sudo mv /metrics_renders/profile/* ./profile/
+          fi
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           git add profile/*.svg
