@@ -37,7 +37,7 @@ jobs:
           token: ${{ secrets.GH_PAT }}
 
       - name: Generate isometric calendar
-        id: isocalendar
+        id: lowlightermetrics_isocalendar
         continue-on-error: true
         uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d
         with:
@@ -52,7 +52,7 @@ jobs:
           output_action: none
 
       - name: Generate top repositories
-        id: repositories
+        id: lowlightermetrics_repositories
         continue-on-error: true
         uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d
         with:
@@ -91,15 +91,15 @@ jobs:
           always() && (
             steps.stats.outcome == 'failure' ||
             steps.top-langs.outcome == 'failure' ||
-            steps.isocalendar.outcome == 'failure' ||
-            steps.repositories.outcome == 'failure' ||
+            steps.lowlightermetrics_isocalendar.outcome == 'failure' ||
+            steps.lowlightermetrics_repositories.outcome == 'failure' ||
             steps.trophy.outcome == 'failure'
           )
         env:
           STATS_OUTCOME: ${{ steps.stats.outcome }}
           TOP_LANGS_OUTCOME: ${{ steps.top-langs.outcome }}
-          ISOCALENDAR_OUTCOME: ${{ steps.isocalendar.outcome }}
-          REPOSITORIES_OUTCOME: ${{ steps.repositories.outcome }}
+          ISOCALENDAR_OUTCOME: ${{ steps.lowlightermetrics_isocalendar.outcome }}
+          REPOSITORIES_OUTCOME: ${{ steps.lowlightermetrics_repositories.outcome }}
           TROPHY_OUTCOME: ${{ steps.trophy.outcome }}
         run: |
           echo "## Failed README card generators" >> "$GITHUB_STEP_SUMMARY"
