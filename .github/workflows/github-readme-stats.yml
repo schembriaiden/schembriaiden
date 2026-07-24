@@ -17,6 +17,7 @@ jobs:
           token: ${{ secrets.GH_PAT }}
 
       - name: Generate stats card
+        id: stats
         continue-on-error: true
         uses: readme-tools/github-readme-stats-action@v2.0.1
         with:
@@ -26,6 +27,7 @@ jobs:
           token: ${{ secrets.GH_PAT }}
 
       - name: Generate top languages card
+        id: top-langs
         continue-on-error: true
         uses: readme-tools/github-readme-stats-action@v2.0.1
         with:
@@ -35,6 +37,7 @@ jobs:
           token: ${{ secrets.GH_PAT }}
 
       - name: Generate isometric calendar
+        id: isocalendar
         continue-on-error: true
         uses: lowlighter/metrics@v3.34
         with:
@@ -49,6 +52,7 @@ jobs:
           output_action: none
 
       - name: Generate top repositories
+        id: repositories
         continue-on-error: true
         uses: lowlighter/metrics@v3.34
         with:
@@ -63,6 +67,7 @@ jobs:
           output_action: none
 
       - name: Generate Profile Trophy
+        id: trophy
         continue-on-error: true
         uses: ryo-ma/github-profile-trophy@master
         with:
@@ -80,3 +85,48 @@ jobs:
           git add profile/*.svg
           git commit -m "chore: Update README cards" || exit 0
           git push
+
+      - name: Report generator failures
+        if: >-
+          always() && (
+            steps.stats.outcome == 'failure' ||
+            steps.top-langs.outcome == 'failure' ||
+            steps.isocalendar.outcome == 'failure' ||
+            steps.repositories.outcome == 'failure' ||
+            steps.trophy.outcome == 'failure'
+          )
+        env:
+          STATS_OUTCOME: ${{ steps.stats.outcome }}
+          TOP_LANGS_OUTCOME: ${{ steps.top-langs.outcome }}
+          ISOCALENDAR_OUTCOME: ${{ steps.isocalendar.outcome }}
+          REPOSITORIES_OUTCOME: ${{ steps.repositories.outcome }}
+          TROPHY_OUTCOME: ${{ steps.trophy.outcome }}
+        run: |
+          echo "## Failed README card generators" >> "$GITHUB_STEP_SUMMARY"
+
+          if [[ "$STATS_OUTCOME" == "failure" ]]; then
+            echo "::error title=Generator failed::Generate stats card"
+            echo "- Generate stats card" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          if [[ "$TOP_LANGS_OUTCOME" == "failure" ]]; then
+            echo "::error title=Generator failed::Generate top languages card"
+            echo "- Generate top languages card" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          if [[ "$ISOCALENDAR_OUTCOME" == "failure" ]]; then
+            echo "::error title=Generator failed::Generate isometric calendar"
+            echo "- Generate isometric calendar" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          if [[ "$REPOSITORIES_OUTCOME" == "failure" ]]; then
+            echo "::error title=Generator failed::Generate top repositories"
+            echo "- Generate top repositories" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          if [[ "$TROPHY_OUTCOME" == "failure" ]]; then
+            echo "::error title=Generator failed::Generate Profile Trophy"
+            echo "- Generate Profile Trophy" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          exit 1
