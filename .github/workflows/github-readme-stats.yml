@@ -41,7 +41,7 @@ jobs:
         continue-on-error: true
         uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
           user: schembriaiden
           template: classic
           base: ""
@@ -56,7 +56,7 @@ jobs:
         continue-on-error: true
         uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
           user: schembriaiden
           template: classic
           base: ""
