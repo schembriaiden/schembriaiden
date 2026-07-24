@@ -39,7 +39,7 @@ jobs:
       - name: Generate isometric calendar
         id: isocalendar
         continue-on-error: true
-        uses: lowlighter/metrics@v3.34
+        uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: schembriaiden
@@ -54,7 +54,7 @@ jobs:
       - name: Generate top repositories
         id: repositories
         continue-on-error: true
-        uses: lowlighter/metrics@v3.34
+        uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: schembriaiden
@@ -69,7 +69,7 @@ jobs:
       - name: Generate Profile Trophy
         id: trophy
         continue-on-error: true
-        uses: ryo-ma/github-profile-trophy@master
+        uses: ryo-ma/github-profile-trophy@ccb591b887775ee567c0d9a38424ddfb9b1906c4
         with:
             token: ${{ secrets.GH_PAT }}
             username: schembriaiden
