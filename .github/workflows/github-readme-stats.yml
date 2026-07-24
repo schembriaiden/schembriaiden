@@ -12,12 +12,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
         with:
           token: ${{ secrets.GH_PAT }}
 
       - name: Generate stats card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2.0.1
         with:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true
@@ -25,7 +25,7 @@ jobs:
           token: ${{ secrets.GH_PAT }}
 
       - name: Generate top languages card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2.0.1
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&theme=tokyonight&hide_border=true&langs_count=8
@@ -46,7 +46,7 @@ jobs:
           output_action: none
 
       - name: Generate top repositories
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: schembriaiden
