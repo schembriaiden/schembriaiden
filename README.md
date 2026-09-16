@@ -17,7 +17,7 @@
   ## 🚀 About Me
 
   <!-- 🔭 Working on [Worther](https://worther.vercel.app/), developing aircraft for MSFS with [Horizon Simulations](https://github.com/Horizon-Simulations) & [Lunar Simulations](https://lunar-simulations.github.io/)   -->
-  🌱 Currently learning **Rust** & **Zig**  
+  🌱 Currently learning **Go**  
   ⚡ Interests: Coding • Gaming • Aviation • Flight Sim • Rockets & Space  • Quantum • Football
   <br>
 
@@ -55,7 +55,7 @@
     <a href="https://www.python.org"><img src="https://go-skill-icons.vercel.app/api/icons?i=python" alt="Python" width="48" height="48" /></a>
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://go-skill-icons.vercel.app/api/icons?i=js" alt="JavaScript" width="48" height="48" /></a>
     <a href="https://www.typescriptlang.org"><img src="https://go-skill-icons.vercel.app/api/icons?i=typescript" alt="TypeScript" width="48" height="48" /></a>
-    <a href="https://ziglang.org"><img src="https://go-skill-icons.vercel.app/api/icons?i=zig" alt="Zig" width="48" height="48" /></a>
+    <a href="https://go.dev/"><img src="https://go-skill-icons.vercel.app/api/icons?i=golang" alt="Go" width="48" height="48" /></a>
     <a href="https://www.gnu.org/software/bash/"><img src="https://go-skill-icons.vercel.app/api/icons?i=bash" alt="Bash" width="48" height="48" /></a>
     <a href="https://www.latex-project.org"><img src="https://go-skill-icons.vercel.app/api/icons?i=latex" alt="LaTeX" width="48" height="48" /></a>
   </p>
